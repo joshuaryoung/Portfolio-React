@@ -14,7 +14,7 @@ class NavBar extends Component
 				break;
 				
 			case '/Portfolio':
-				activeLinkHighlight = {x: '44.35vw', y: '0vh'};
+				activeLinkHighlight = {x: '44.18vw', y: '0vh'};
 				break;
 				
 			case '/Social-Media':
