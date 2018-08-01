@@ -1,0 +1,417 @@
+html, body
+{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-family: 'Special Elite', cursive;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.App
+{
+  text-align: center;
+}
+
+.app-container
+{
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+}
+
+.routes-container
+{
+	height: 100%;
+}
+
+/* NAV-BAR */
+.nav-container
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	height: 5%;
+	background-color: rgba(255,255,255,.25);
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.brand
+{
+	font-family: 'Dokdo';
+	position: absolute;
+	left: 14vw;
+	top: .2vh;
+	color: #d2d2d2;
+	font-size: 4vh;
+}
+
+.motto
+{
+	font-family: 'Dokdo';
+	position: absolute;
+	left: 73vw;
+	top: .6vh;
+	color: #d2d2d2;
+	font-size: 3vh;
+}
+
+.jsxLinks-container
+{
+	color: #d2d2d2;
+	width: 45%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.jsxLinks-container a
+{
+	position: relative;
+	color: white;
+	z-index: 11;
+}
+
+.navbar-highlight-effect
+{
+	position: absolute;
+	background-color: rgba(255,255,255,.5);
+	width: 8vw;
+	height: 5vh;
+	transition: all cubic-bezier(.68,-0.55,.27,1.55) 1500ms;
+	border-radius: 1vw;
+}
+
+/* HOME */
+.home-container
+{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;background-size: cover;
+	background-position-y: 100vh;
+}
+
+.home-text-container
+{
+	position: absolute;
+	top: 26vh;
+	left: 50vw;
+	transform: translate(-61%,0);
+	color: white;
+	text-align: center;
+}
+
+h3
+{
+	font-size: 22px;
+}
+
+/* PORTFOLIO */
+.portfolio-container
+{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-position-y: -11vh;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+.PortfolioTable
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	width: 61vw;
+	left: 4vw;
+}
+
+.PortfolioTable div
+{
+	position: relative;
+}
+
+.PortfolioTable div:hover *
+{
+	transform: scale(1);
+	filter: grayscale(0%);
+	cursor: pointer;
+	transition: all 900ms cubic-bezier(.18,.89,.32,2);
+}
+
+.table-img
+{
+	transform: scale(.75);
+	filter: grayscale(100);
+	transition: all 900ms cubic-bezier(.18,.89,.32,1.5);
+	border-radius: 20px;
+}
+
+.table-text
+{
+	transform: scale(.75);
+	transition: all 900ms cubic-bezier(.18,.89,.32,1.5);
+	position: absolute;
+	top: 48%;
+	text-align: center;
+	width: 100%;
+}
+
+/* SOCIAL-MEDIA */
+.social-media-container
+{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.SocialMediaButtons
+{
+}
+
+.SocialMediaButtons a
+{
+	position: absolute;
+	text-align: center;
+}
+
+.SocialMediaButtons a:hover *
+{
+	transform: scale3d(1,1,1);
+	transition: transform 500ms cubic-bezier(.18,.89,.32,2);
+}
+
+.social-media-button
+{
+	width: 4vw;
+	transform: scale(.75);
+	transition: transform 500ms cubic-bezier(.18,.89,.32,1.5);
+}
+
+.josh-image-container
+{
+	position: absolute;
+	left: 74.5vw;
+	top: 14vh;
+	z-index: 0;
+}
+
+.josh-image
+{
+	width: 12vw;
+	filter: blur(5px);
+	transform: scale3d(.97,.97,1);
+	transition: all 350ms linear;
+	border: 6px solid beige;
+}
+
+.josh-image:hover
+{
+	filter: blur(0px);
+	transform: scale3d(1,1,1);
+	transition: all 350ms linear;
+}
+
+/* MODAL */
+.Modal
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+}
+
+[class *= "Modal-portfolio"] p
+{
+	max-width: 50%;
+	display: flex;
+	flex-shrink: 1;
+	justify-self: space-evenly;
+}
+
+[class *= "Modal-portfolio"] a
+{
+	flex-shrink: 1;
+}
+
+
+.modal-inactive
+{
+	display: none;
+}
+
+.ModalDialog
+{
+	position: relative;
+	width: 30vw;
+	border-radius: 10px;
+	z-index: 21;
+	background-color: silver;
+	transform: scale3d(0,0,0);
+	transition: all 500ms ease-out;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+[class *= "Modal-portfolio"] .ModalDialog
+{
+	left: 61.5vw;
+}
+
+[class *= "Modal-social-media"] .ModalDialog
+{
+	left: 61.5vw;
+}
+
+.ModalHeader
+{
+	border-bottom: double 7px black;
+	font-size: 64px;
+	padding: 3% 0% 0% 0%;
+}
+
+.ModalBody
+{
+	position: relative;
+	padding: 24% 13%;
+	font-size: 20px;
+	line-height: 1.75;
+	display: flex;
+	flex-direction: row;
+}
+
+[class *= "Modal-portfolio"] .ModalBody
+{
+	padding: 2% 2%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.ModalBody.about-josh
+{
+	padding: 4% 5%;
+	display: block;
+	height: 57vh;
+	line-height: 1.25;
+	font-size: 18px;
+}
+
+.about-josh .modal-body-image0
+{
+	position: absolute;
+	top: 5%;
+	left: 48%;
+	width: 45%;
+}
+
+.about-josh .modal-body-image1
+{
+	position: absolute;
+	top: 47%;
+	left: 5%;
+	height: 50%;
+}
+
+.about-josh .modal-body-p0
+{
+	text-align: left;
+	width: 35%;
+}
+
+.about-josh .modal-body-p1
+{
+	text-align: right;
+	width: 50%;
+	align-self: end;
+	position: relative;
+	left: 13.2vw;
+}
+
+.ModalBody img
+{
+	box-shadow: rgba(0,0,0,.75) 8px 8px 10px;
+	border-radius: 20px;
+}
+
+p
+{
+	margin: 0;
+}
+
+.ModalBackground
+{
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,.8);
+	z-index: 20;
+	opacity: 0;
+	transition: all ease-out 500ms;
+}
+
+/* ANIMATIONS */
+.fade-enter
+{
+	opacity: 0;
+	transition: opacity ease-out 1500ms;
+}
+
+.fade-enter-done
+{
+	position:absolute;
+	z-index: 5;
+	opacity: 1;	
+	transition: opacity ease-out 1500ms;
+}
+
+.fade-exit-active
+{
+	position:absolute;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity ease-out 1500ms;
+}
+
+
+.fade-modal-enter
+{
+	opacity: 0;
+	transition: all ease-out 500ms;
+}
+
+.fade-modal-enter-done
+{
+	position:absolute;
+	opacity: 1;
+	transform: scale3d(1,1,1);	
+	transition: all ease-out 500ms;
+}
+
+.fade-modal-exit-active
+{
+	position:absolute;
+	z-index: 1;
+	opacity: 0;
+	transition: all ease-out 500ms;
+}
