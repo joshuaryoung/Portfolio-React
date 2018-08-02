@@ -60,7 +60,7 @@ function ModalDialog(props)
 		newImageArr = props.image.map((item, i) => props.imgLink ? <a href = {props.imgLink[i]}  target = "_blank" key={i}> <img src = {item} className = {'modal-body-image' + i} /> </a> : <img src = {item} key={i} className = {'modal-body-image' + i} />);
 	}
 	return (
-		<div className = "ModalDialog" style = {{backgroundImage: 'url(' + props.bgImage + ')'}}>
+		<div className = "ModalDialog" style = {{backgroundImage: 'url(' + (props.bgImage ? props.backgroundImage : '') + ')'}}>
 			<div className = {"ModalHeader " + props.modalClass}>
 				{props.header}
 			</div>			
