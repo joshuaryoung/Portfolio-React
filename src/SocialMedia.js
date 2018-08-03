@@ -81,7 +81,7 @@ const joshAbout = {
 
 function SocialMediaButtons()
 {
-	const HORIZONTAL_SPACING = 8, HORIZONTAL_OFFSET = 46.75;
+	const HORIZONTAL_SPACING = 8, HORIZONTAL_OFFSET = 46.27;
 	
 	for(let i = 1; i < socialMediaButtonArr.length ; i++)
 	{

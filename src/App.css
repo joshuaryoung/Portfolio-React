@@ -1,3 +1,15 @@
+@font-face
+{
+	font-family: 'Dokdo';
+  src: url('./fonts/Dokdo-Regular.ttf');
+}
+
+@font-face
+{
+	font-family: 'Special Elite';
+  src: url('./fonts/SpecialElite-Regular.ttf');
+}
+
 html, body
 {
 	width: 100vw;
@@ -214,10 +226,12 @@ h3
 .josh-image
 {
 	width: 12vw;
-	filter: blur(5px);
+	filter: blur(1px);
 	transform: scale3d(.97,.97,1);
 	transition: all 350ms linear;
 	border: 6px solid beige;
+	cursor: pointer;
+	
 }
 
 .josh-image:hover
