@@ -20,6 +20,8 @@ class NavBar extends Component
 			case '/Social-Media':
 				activeLinkHighlight = {x: '57.4vw', y: '0vh'};
 				break;
+      default:
+        break;
 		}
 		
     return (

@@ -8,7 +8,6 @@ import clayMarksImage from './img/clayMarks.jpg';
 import clayMarksOriginalImage from './img/clayMarksOriginal.jpg';
 import breakOutImage from './img/breakOut.jpg';
 import satoshiKonImage from './img/satoshiKon.jpg';
-import ticTacToeImage from './img/ticTacToe.jpg';
 
 const bgStyle = {backgroundImage: 'url(' + backgroundImage + ')'};
 

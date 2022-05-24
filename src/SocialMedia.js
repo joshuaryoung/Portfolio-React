@@ -105,7 +105,7 @@ function JoshImage(props)
 {
 	return(
 		<div className = "josh-image-container">
-			<img src = {joshImage} alt = "Josh Image" className = "josh-image" onClick = {props.handleClick}/>
+			<img src = {joshImage} alt = "Josh" className = "josh-image" onClick = {props.handleClick}/>
 		</div>
 	);
 }

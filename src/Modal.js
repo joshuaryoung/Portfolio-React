@@ -53,11 +53,11 @@ class Modal extends Component
 
 function ModalDialog(props)
 {
-	let newImageArr = props.imgLink ? <a href = {props.imgLink} target = "_blank"><img src = {props.image} className = {'modal-body-image0'} /> </a> : <img src = {props.image} className = {'modal-body-image0'} />;
+	let newImageArr = props.imgLink ? <a href = {props.imgLink} target = "_blank"><img src = {props.image} alt="" className = {'modal-body-image0'} /> </a> : <img src = {props.image} alt="" className = {'modal-body-image0'} />;
 	
 	if(Array.isArray(props.image))
 	{
-		newImageArr = props.image.map((item, i) => props.imgLink ? <a href = {props.imgLink[i]}  target = "_blank" key={i}> <img src = {item} className = {'modal-body-image' + i} /> </a> : <img src = {item} key={i} className = {'modal-body-image' + i} />);
+		newImageArr = props.image.map((item, i) => props.imgLink ? <a href = {props.imgLink[i]} target = "_blank" key={i}> <img src = {item} alt="" className = {'modal-body-image' + i} /> </a> : <img src = {item} alt="" key={i} className = {'modal-body-image' + i} />);
 	}
 	return (
 		<div className = "ModalDialog" style = {{backgroundImage: 'url(' + (props.bgImage ? props.backgroundImage : '') + ')'}}>
